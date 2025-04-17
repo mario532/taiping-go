@@ -1,0 +1,37 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to bottom right, #f0f8ff, #dbefff);
+    color: #333;
+  }
+  
+  #word {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px;
+    color: #2a6f97;
+  }
+  
+  #input {
+    font-size: 22px;
+    padding: 10px;
+    border: 2px solid #2a6f97;
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  .level-btn {
+    background-color: #89c2d9;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .level-btn:hover {
+    background-color: #468faf;
+  }
+  

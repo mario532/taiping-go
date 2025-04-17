@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>タイピングゲーム</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: linear-gradient(to bottom right, #f0f8ff, #dbefff);
+      color: #333;
+    }
+
+    #word {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 20px;
+      color: #2a6f97;
+    }
+
+    #input {
+      font-size: 22px;
+      padding: 10px;
+      border: 2px solid #2a6f97;
+      border-radius: 5px;
+      width: 300px;
+    }
+
+    .level-btn {
+      background-color: #89c2d9;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .level-btn:hover {
+      background-color: #468faf;
+    }
+  </style>
+</head>
+<body>
+  <h1>タイピングゲーム</h1>
+  <button onclick="toggleBGM()">🎵 BGM ON/OFF</button>
+
+  <div>
+    <button class="level-btn" onclick="setLevel('easy')">かんたん</button>
+    <button class="level-btn" onclick="setLevel('normal')">ふつう</button>
+    <button class="level-btn" onclick="setLevel('hard')">むずかしい</button>
+  </div>
+
+  <div id="word">レベルを選んでね！</div>
+  <input type="text" id="input" disabled placeholder="ここにタイプ！">
+  <div id="info">
+    <div>⏱ 残り時間: <span id="timer">60</span> 秒</div>
+    <div>✅ スコア: <span id="score">0</span></div>
+  </div>
+  <div id="result"></div>
+
+  <h2>🏆 ランキング（ローカル保存）</h2>
+  <ol id="ranking"></ol>
+
+  <!-- 音声ファイル -->
+  <audio id="bgm" src="bgm.mp3" loop></audio>
+  <audio id="correct-sound" src="correct.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
